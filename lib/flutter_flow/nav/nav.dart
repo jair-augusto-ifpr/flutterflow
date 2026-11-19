@@ -74,37 +74,15 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       navigatorKey: appNavigatorKey,
-      errorBuilder: (context, state) => const InicialWidget(),
+      errorBuilder: (context, state) =>
+          appStateNotifier.loggedIn ? ListagemDeUsuRiosWidget() : LoginWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) => const InicialWidget(),
-        ),
-        FFRoute(
-          name: InicialWidget.routeName,
-          path: InicialWidget.routePath,
-          builder: (context, params) => const InicialWidget(),
-        ),
-        FFRoute(
-          name: ListaUsuariosWidget.routeName,
-          path: ListaUsuariosWidget.routePath,
-          builder: (context, params) => const ListaUsuariosWidget(),
-        ),
-        FFRoute(
-          name: CadastroUsuarioWidget.routeName,
-          path: CadastroUsuarioWidget.routePath,
-          builder: (context, params) => const CadastroUsuarioWidget(),
-        ),
-        FFRoute(
-          name: ListaTarefasWidget.routeName,
-          path: ListaTarefasWidget.routePath,
-          builder: (context, params) => const ListaTarefasWidget(),
-        ),
-        FFRoute(
-          name: CadastroTarefaWidget.routeName,
-          path: CadastroTarefaWidget.routePath,
-          builder: (context, params) => const CadastroTarefaWidget(),
+          builder: (context, _) => appStateNotifier.loggedIn
+              ? ListagemDeUsuRiosWidget()
+              : LoginWidget(),
         ),
         FFRoute(
           name: ListagemDeUsuRiosWidget.routeName,

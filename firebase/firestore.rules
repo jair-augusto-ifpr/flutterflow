@@ -7,15 +7,5 @@ service cloud.firestore {
       allow write: if true;
       allow delete: if true;
     }
-
-    match /usuarios/{document} {
-      allow create: if true;
-      allow read: if true;
-    }
-
-    match /tarefas/{document} {
-      allow create: if true;
-      allow read: if true;
-    }
   }
 }
