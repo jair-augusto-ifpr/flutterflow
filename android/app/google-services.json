@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "675362576621",
+    "project_id": "topicoszotts",
+    "storage_bucket": "topicoszotts.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:675362576621:android:8fb590442f71122bb994e4",
+        "android_client_info": {
+          "package_name": "com.mycompany.usermanager"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6oZwnHq_rcmp7OgP_U1CzllFiJHQdVlo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
